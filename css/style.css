@@ -1,0 +1,271 @@
+/*  
+  1-common styles
+  2-general styles
+  3-sections
+   3.0-Header Section
+   3.1-About-Catering Section
+   3.2-Our-Menu Section
+   3.3-Contact Section
+   3.4-Footer Section
+
+*/
+
+/* 1-common styles */
+
+/* 
+   -class container to get width all elements in center 
+   -overlay
+*/
+
+/* 2-general styles */
+
+:root{
+    --grayC: #999;
+    --grayC-light: #e8e8e8;
+    --black-light: #222;
+    --whiteC: #fff;
+    --black:#000;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container-99{
+    width: 99%;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: montserrat,sans-serif;
+}
+button{
+    font-family: inherit;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.opacityHover{
+    transition: .5s opacity;
+}
+.opacityHover:hover{
+    opacity: .6;
+}
+
+.pd-y{
+    padding: 64px 0;
+}
+
+.pd-y-30{
+    padding: 15px 0;
+}
+.letter-spacing-5{
+    letter-spacing: 5px;
+}
+.header-sections{
+    margin: 30px 0px 50px 0;
+    font-size: 20px;
+    font-weight: 400px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.hr-after-sections{
+    width: 80%;
+    margin: 20px auto;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+span{
+    display: block;
+}
+
+/* Header Section */
+
+header{
+    background-image: url(../images/hamburger.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.header-menu{
+    background: var(--whiteC);
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 15px;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 2px 5px 3px var(--grayC-light);
+}
+.header-menu > .container-99{
+    display: flex;
+    justify-content: space-between;
+}
+.header-menu .title{
+    padding: 8px 16px;
+    font-weight: normal;
+    transition: background .5s;
+    cursor: pointer;
+}
+
+.header-menu .list li{
+    display: inline-block;
+    padding: 8px 16px;
+    transition: background .5s;
+}
+.header-menu .list li a{
+    color: var(--black);
+    padding: 8px 0;
+    letter-spacing: 4px;
+}
+.header-menu .list li:hover, .header-menu .title:hover{
+    background: var(--grayC);
+}
+
+.logo{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 36px;
+    font-weight: 400px;
+}
+
+/* About-Catering Section*/
+.about-catering > .container ,.our-menu > .container{
+    display: flex;
+    justify-content: space-around;
+}
+.about-catering-img{
+    position: relative;
+}
+.about-info{
+    padding-left: 50px;
+}
+.about-info-data{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-info-desc{
+    line-height: 1.7;
+    letter-spacing: 2px;
+}
+.about-info-desc:last-child{
+    margin-top: 20px;
+    color: var(--grayC);
+}
+
+/* Our-Menu Section */
+
+.our-menu-info-name{
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.our-menu-info-desc{
+    color: var(--grayC);
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+/* Contact Section */
+.contact > .container .contact-title{
+    text-align: left;
+}
+.conact-info-address{
+    margin: 30px 0;
+    color: rgb(18, 104, 126);
+}
+.conact-info-information{
+    margin-bottom: 30px;
+}
+.conact-get-tuch input{
+    width: 100%;
+    padding: 18px 16px;
+    border: 0;
+    border-bottom: 1px solid var(--grayC);
+}
+.contact-btn{
+    margin:30px 0;
+    padding: 8px 16px;
+    background: #f1f1f1;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 16px;
+}
+/* Footer Section */
+footer{
+    display: flex;
+    background: var(--grayC);
+}
+.footer-content{
+    margin: auto;
+}
+.footer-content a{
+    color:#000;
+    text-decoration: underline;
+}
+
+/* Screen Tablets */
+@media screen and (max-width:768px){
+    header{
+   
+    }
+    .header-menu{
+        font-size: 12px;
+    }
+    .header-menu .title{
+        padding: 6px 14px;
+    }
+    .header-menu .list li{
+        padding: 6px 14px;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+    
+    /* About-Catering Section*/
+    .about-catering > .container ,.our-menu > .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Screen Cell-Phones */
+@media screen and (max-width:500px){
+    .header-menu{
+        font-size: 10px;
+    }
+    .header-menu .title{
+        padding: 5px 13px;
+    }
+    .header-menu .list li{
+        padding: 5px 13px;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+    
+    /* About-Catering Section*/
+    .about-catering > .container ,.our-menu > .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
