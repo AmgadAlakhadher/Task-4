@@ -16,14 +16,15 @@
 </head>
 <body>
     <!-- Header Section -->
- <header class="capitalize">
+ <header class="capitalize header-section">
      <div class="header-menu">
           <div class="container-99">
             <h3 class="title letter-spacing-5">gourmet au catering</h3>
             <ul class="list">
-               <li><a href="#">about</a></li>
-               <li><a href="#">menu</a></li>
-               <li><a href="#">contact</a></li>
+               <li><a href="#" class="home active" id="header-header-section">home</a></li>
+               <li><a href="#" class="about" id="about-catering">about</a></li>
+               <li><a href="#" class="menu" id="our-menu">menu</a></li>
+               <li><a href="#" class="contact" id="contact-section">contact</a></li>
             </ul> <!-- ./list -->
           </div> <!-- ./container-99 -->
      </div> <!-- ./header-menu -->
@@ -84,9 +85,9 @@
 
  <hr class="hr-after-sections">
 
- <!-- Contact Section -->
+     <!-- Contact Section -->
 
- <section class="contact pd-y">
+ <section class="contact contact-section pd-y">
      <div class="container capitalize">
         <div class="header-sections">
             <h2 class="contact-title">contact</h2>
@@ -106,15 +107,21 @@
            <input type="text" name="name" placeholder="Name">
            <input type="number" name="people" placeholder="How many people">
            <input type="datetime-local" name="date" required>
-           <input type="text" name="specila-req" placeholder="Message \ Special requirements">
+           <input type="text" name="specila-req" class="specila-req" placeholder="Message \ Special requirements">
            <button class="contact-btn">send message</button>
         </form> <!-- ./contact-get-tuch -->
      </div> <!-- ./container -->
  </section> <!-- ./contact -->
 
- <!-- Footer Section -->
+    <!-- Footer Section -->
  <footer class="pd-y">
-     <h4 class="footer-content">powered by <a href="www.w3scools.con">w3.css</a></h4>
+     <h4 class="footer-content">powered by <a href="www.w3scools.com">w3.css</a></h4>
  </footer>
+
+ <div class="scrollTop">To Top</div>
+    <!-- jquery file -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- javaScript Files -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -104,12 +104,15 @@ header{
     position: relative;
 }
 .header-menu{
-    background: var(--whiteC);
     width: 100%;
     padding: 8px 16px;
     font-size: 15px;
     position: fixed;
     z-index: 1;
+    transition: background .5s, box-shadow .5s;
+}
+.header-menu-under-header{
+    background: var(--whiteC);
     box-shadow: 2px 5px 3px var(--grayC-light);
 }
 .header-menu > .container-99{
@@ -125,15 +128,15 @@ header{
 
 .header-menu .list li{
     display: inline-block;
-    padding: 8px 16px;
-    transition: background .5s;
 }
 .header-menu .list li a{
+    padding: 8px 16px;
+    transition: background .5s;
     color: var(--black);
-    padding: 8px 0;
+    display: block;
     letter-spacing: 4px;
 }
-.header-menu .list li:hover, .header-menu .title:hover{
+.header-menu .list li a:hover, .header-menu .title:hover, .header-menu .list li a.active{
     background: var(--grayC);
 }
 
@@ -220,9 +223,6 @@ footer{
 
 /* Screen Tablets */
 @media screen and (max-width:768px){
-    header{
-   
-    }
     .header-menu{
         font-size: 12px;
     }
@@ -268,4 +268,15 @@ footer{
         justify-content: center;
         align-items: center;
     }
+}
+.scrollTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: var(--black-light);
+    color: var(--whiteC);
+    cursor: pointer;
+    border-radius: 20%;
+    display: none;
 }
